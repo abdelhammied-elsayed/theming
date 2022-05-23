@@ -1,11 +1,10 @@
 import dynamic from "next/dynamic";
-import getConfig from "next/config";
 import { useContext } from "react";
 import { ThemeContext } from "../providers/themeProvider";
 
 function useThemeComponent() {
   const theme = useContext(ThemeContext);
-  
+
   return {
     default: {
       Layout: dynamic(() => import("../layouts/layout1")),

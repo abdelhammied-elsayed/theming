@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 function LatestNewsTheme2({ latestNews }) {
   return (
@@ -8,7 +7,5 @@ function LatestNewsTheme2({ latestNews }) {
     </div>
   );
 }
-
-LatestNewsTheme2.propTypes = {};
 
 export default LatestNewsTheme2;

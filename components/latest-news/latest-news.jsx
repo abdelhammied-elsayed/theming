@@ -1,6 +1,4 @@
-import React, { useContext } from "react";
-
-import getConfig from "next/config";
+import React from "react";
 
 import useThemeComponent from "../../hooks/theme";
 
@@ -9,7 +7,5 @@ function LatestNews({ latestNews }) {
 
   return <LatestNews latestNews={latestNews} />;
 }
-
-LatestNews.propTypes = {};
 
 export default LatestNews;

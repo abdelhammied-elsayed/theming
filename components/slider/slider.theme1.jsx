@@ -1,17 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
 
 function SliderTheme1(props) {
-    return (
-        <div>
-            Theme 1 Slider
-        </div>
-    )
+  return <div>Theme 1 Slider</div>;
 }
 
-SliderTheme1.propTypes = {
-
-}
-
-export default SliderTheme1
-
+export default SliderTheme1;
