@@ -7,7 +7,7 @@ import getConfig from "next/config";
 
 function MyApp({ Component, pageProps }) {
   const { publicRuntimeConfig } = getConfig();
-  console.log("publicRuntimeConfig", publicRuntimeConfig);
+
   return (
     <Provider store={store}>
       <ThemeProvider theme={publicRuntimeConfig.theme}>
@@ -16,11 +16,13 @@ function MyApp({ Component, pageProps }) {
     </Provider>
   );
 }
+
 MyApp.getInitialProps = async (ctx) => {
   const { publicRuntimeConfig } = getConfig();
 
-  publicRuntimeConfig.theme = "default";
-  console.log("publicRuntimeConfig from app", publicRuntimeConfig);
+  publicRuntimeConfig.theme = "secondTheme";
+
   return { props: null };
 };
+
 export default MyApp;
