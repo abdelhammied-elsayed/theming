@@ -2,18 +2,20 @@ import React, { createContext, useEffect, useState } from "react";
 
 export const ThemeContext = createContext(null);
 
-export default function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(null);
+export default function ThemeProvider({ children, ...props }) {
+  // const [theme, setTheme] = useState(null);
+  console.log("props", props);
+  // useEffect(() => {
+  //   setTheme("default");
+  // }, []);
 
-  useEffect(() => {
-    setTheme("default");
-  }, []);
-
-  if (theme === null) {
-    return null;
-  }
+  // if (theme === null) {
+  //   return null;
+  // }
 
   return (
-    <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
+    <ThemeContext.Provider value={props.theme}>
+      {children}
+    </ThemeContext.Provider>
   );
 }
