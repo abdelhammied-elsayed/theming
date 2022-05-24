@@ -11,7 +11,7 @@ export default function Index(props) {
       <Head>
         <meta name="author" content={props.name} />
 
-        <title>We are here</title>
+        <title>{props.name}</title>
       </Head>
 
       <Layout>
